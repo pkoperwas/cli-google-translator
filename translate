@@ -1,0 +1,7 @@
+#!/bin/sh
+FROM=$1
+TO=$2
+WHAT=`shift ; shift ; echo "$@" | tr " " "+"`
+echo -e "\n"
+curl -s --user-agent "Firefox/69.1.1 (FreeBSD-Koperek)" "https://translate.google.com/m?hl=en&sl=${FROM}&tl=${TO}&ie=UTF-8&prev=_m&q=${WHAT}" |  grep -o 'result-container">[^<]*' | sed 's/result-container">//'
+echo -e "\n"
