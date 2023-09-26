@@ -6,5 +6,5 @@ Just download translate script and grant executable permission
 Usage: 
 ./translate {FROM} {TO} {WHAT} 
 
-
+![Screenshot](translate.png)
 
